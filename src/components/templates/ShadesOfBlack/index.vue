@@ -69,15 +69,15 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
   #preview {
     width: 794px;
     margin: 0 auto;
   }
-  .leftCol {
+  #preview .leftCol {
     width: 232px;
   }
-  .leftCol .photo {
+  #preview .leftCol .photo {
     width: 188px;
     height: auto;
     border: 1px solid #dddddd;
