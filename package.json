@@ -1,0 +1,23 @@
+{
+  "name": "imprezify-templates",
+  "version": "1.0.0",
+  "description": "This package is an open-source package for providing creative resume template for imprezify.com ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/neumerance/imprezify-templates.git"
+  },
+  "keywords": [
+    "imprezify",
+    "imprezify-templates"
+  ],
+  "author": "Jonathan Canaveral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neumerance/imprezify-templates/issues"
+  },
+  "homepage": "https://github.com/neumerance/imprezify-templates#readme"
+}
