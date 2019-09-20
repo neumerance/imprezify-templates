@@ -2,16 +2,24 @@
   <div id="app">
     <v-app>
       <v-content>
-        <v-container>Hello world</v-container>
+        <ShadesOfBlack
+          :basicInformation="{}"
+          :contactInformation="{}"
+          :workExperiences="[]"
+          :educations="[]"
+          :skills="[]" />
       </v-content>
     </v-app>
   </div>
 </template>
 
 <script>
+import * as ImpTemplates from './components/templates';
+
 export default {
   name: 'app',
   components: {
+    ...ImpTemplates
   }
 }
 </script>
