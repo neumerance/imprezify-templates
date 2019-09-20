@@ -6,19 +6,19 @@
           <div class="leftCol white--text ma-3">
             <div class="mb-3">
               <Photo :photo="basicInformation.photo" />
+              <v-divider class="mb-3"></v-divider>
             </div>
-            <v-divider class="mb-3"></v-divider>
             <div class="basic-info white--text mb-3">
               <h3 class="subtitle white--text mb-3">Contacts</h3>
               <ContactInformation :contactInformation="contactInformation" />
+              <v-divider class="mb-3"></v-divider>
             </div>
-            <v-divider class="mb-3"></v-divider>
             <div class="basic-info white--text mb-3">
               <h3 class="subtitle white--text mb-3">Personal Info</h3>
               <BasicInformation :basicInformation="basicInformation" />
+              <v-divider class="mb-3"></v-divider>
             </div>
-            <v-divider class="mb-3"></v-divider>
-            <div class="mb-3">
+            <div v-if="skills.length" class="mb-3">
               <h3 class="subtitle white--text mb-3">Skills</h3>
               <Skill
                 :skill="skill"
@@ -35,16 +35,17 @@
             </div>
             <div class="mb-3">
               <ProfileOverview :overview="basicInformation.overview" />
+              <v-divider class="mb-3"></v-divider>
             </div>
-            <v-divider class="mb-3"></v-divider>
-            <div class="work-experiences mb-3">
+            <div v-if="workExperiences.length" class="work-experiences mb-3">
               <h2 class="subtitle mb-3">WORK EXPERIENCES</h2>
               <TimelinedEntity :entities="workExperiences" />
+              <v-divider class="mb-3"></v-divider>
             </div>
-            <v-divider class="mb-3"></v-divider>
-            <div class="education mb-3">
+            <div v-if="educations.length" class="education mb-3">
               <h2 class="subtitle">EDUCATION</h2>
               <TimelinedEntity :entities="educations" />
+              <v-divider class="mb-3"></v-divider>
             </div>
           </div>
         </v-flex>

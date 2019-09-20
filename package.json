@@ -1,7 +1,11 @@
 {
   "name": "imprezify-templates",
   "version": "0.1.0",
-  "private": true,
+  "description": "Open source create template provider for imprezify.",
+  "private": false,
+  "author": "Jonathan Canaveral",
+  "license": "MIT",
+  "main": "./dist/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

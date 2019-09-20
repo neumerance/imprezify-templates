@@ -1,10 +1,15 @@
 <template>
-  <img :src="photo" />
+  <img :src="photoSrc" />
 </template>
 <script>
 export default {
   props: {
     photo: String
+  },
+  computed: {
+    photoSrc() {
+      return this.photo || 'https://i.pravatar.cc/192'
+    }
   }
 }
 </script>
