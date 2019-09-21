@@ -10,7 +10,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name imprezify-template ./src/index.js"
+    "build-bundle": "vue-cli-service build --target lib --name imprezify-template ./src/index.js",
+    "test": "jest"
   },
   "files": [
     "dist/*",
@@ -19,18 +20,41 @@
     "*.json",
     "*.js"
   ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ]
+  },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vuetify": "^2.0.18"
+    "vuetify": "^2.0.18",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-preset-env": "^1.7.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "jest": "^24.9.0",
+    "jest-canvas-mock": "^2.1.1",
+    "nodemon": "^1.18.9",
+    "vue-jest": "^3.0.5",
+    "babel-jest": "^24.9.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
