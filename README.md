@@ -282,3 +282,12 @@ describe('ShadesOfBlack', () => {
 Now run the test
 
 `npm run test`
+
+
+###### Finish things up
+
+Once everything is done, don't forget to fill up our template manifest in `src/components/templates/manifest.js`
+Also include a `400 × 565` thumbnail preview of your work.
+
+Once your PR is approved and merge, we will publish your work in imprezify.com .
+We will also feature you and your work in our homepage. **Thats why dont forget to fillup the manifest.js**
