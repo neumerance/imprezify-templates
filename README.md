@@ -39,13 +39,13 @@ Create index.vue in your template directory.
 
 `touch index.vue`
 
-#### Creating your first template
+#### Creating your first resume template
 
 Before anything else, please create a branch for your template.
 `git checkout template-name-of-your-template`
 
 In your template directory, edit index.vue
-```
+```xml
 <template>
 	<h1>Hello Template</h1>
 </template>
@@ -67,22 +67,56 @@ In your template directory, edit index.vue
 
 Note: As you can see, we have defined the props for this component.
 These sets of props is extremely important to make this template work in imprezify.com
-Please make these props consistent to all of our template entry point component.
+Please make these props consistent to all of our template base component.
 
-##### Below is the data structure you can pass to your template props
+Now we have created the base of our resume template. Lets try to run it to see if it works.
 
-###### Basic Information
+`yarn serve` or simply `npm serve`
 
-**Pointers need to remember when integration this data to your template design.**
-Optional - meaning, display the element that contains the data only if present.
-using directive `v-if` is usefull for this.
+browse `localhost:8080/templates/NameOfYourTemplate`, you should see Hello Template.
+
+##### Required and must have templates base component props.
+Your component must have these to make your resume template component works in imprezify.com
+
+```json
+{
+	basicInformation: Object,
+	contactInformation: Object,
+	workExperiences: Array,
+	educations: Array,
+	skills: Array,
+}
+```
+
+###### Basic Information (Object)
+
+**Pointers need to remember when integrating this data to your resume template design.**
+- Optional - means, display the element that contains the data only if present. Using directive `v-if` is usefull for this.
+
+##### Below are the data structure you can pass to your templates base component props
 
 Most of these fields are self-explanatory.
 
-**title** - is the desired title or position of the user.
-**overview** - is the profile summary/overview of the user.
+Required Fields:
 
-```
+- **photo** - An image url or base64 image url
+- **firstName**
+- **middleName**
+- **lastName**
+- **title** - is the desired title or position of the user.
+- **overview** - is the profile summary/overview of the user.
+
+Optional Fields:
+
+- **dateOfBirth**
+- **nationality**
+- **status** - users marital status.
+- **address**
+- **city**
+- **postalCode**
+- **country**
+
+```json
 {
 	firstName: '',
 	middleName: '',
@@ -97,4 +131,56 @@ Most of these fields are self-explanatory.
 	postalCode: '',
 	country: ''
 }
+```
+
+###### Contact Information (Object)
+
+All fields are optional
+
+```json
+{
+	email: '',
+	phone: '',
+	skype: '',
+	linkedin: '',
+}
+```
+
+###### Work Experiences (Array of Objects)
+
+Required Fields:
+
+**name** - Full company name
+**title** - Job title
+**description** - Job description
+**since** - Job start date
+**present** - Boolean field (If user is currently working in the company) defaults to false
+
+Optional Fields:
+
+**until** - Job end date
+**logo** - Company logo
+**phone** - Company contact number
+**address**
+**city**
+**country**
+**postalCode**
+
+```json
+[
+	{
+		name: '',
+		title: '',
+		description: '',
+		since: '',
+		until: null,
+		present: false,
+		logo: '',
+		phone: '',
+		address: '',
+		city: '',
+		country: '',
+		postalCode: ''
+	}
+]
 ```
