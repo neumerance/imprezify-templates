@@ -239,3 +239,46 @@ Required Fields:
 	}
 ]
 ```
+
+###### Creating and running test
+
+From root directory, create a directory where you house your specs for your resume template components.
+
+`mkdir specs/components/templates/NameOfYourTemplate`
+
+For better file orgranization, organize your specs based on the file structure of your components.
+
+Like so `specs/components/templates/NameOfYourTemplate/index.spec.js`
+
+Refer to the example component test below:
+
+```javascript
+import Vue from "vue";
+import Vuetify from 'vuetify';
+import { mount } from '@vue/test-utils';
+import ShadesOfBlack from '../../../src/components/templates/ShadesOfBlack';
+
+Vue.use(Vuetify);
+
+describe('ShadesOfBlack', () => {
+  test('is a Vue instance', () => {
+    const wrapper = mount(
+      ShadesOfBlack, {
+        propsData: {
+          basicInformation: {},
+          contactInformation: {},
+          workExperiences: [],
+          educations: [],
+          skills: []
+        }
+      }
+    )
+    expect(wrapper.isVueInstance()).toBeTruthy()
+  })
+});
+
+```
+
+Now run the test
+
+`npm run test`
