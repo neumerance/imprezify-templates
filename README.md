@@ -99,22 +99,22 @@ Most of these fields are self-explanatory.
 
 Required Fields:
 
-- **photo** - An image url or base64 image url
-- **firstName**
-- **middleName**
-- **lastName**
-- **title** - is the desired title or position of the user.
-- **overview** - is the profile summary/overview of the user.
+- **photo** - String - An image url or base64 image url
+- **firstName** - String
+- **middleName** - String
+- **lastName** - String
+- **title** - String - is the desired title or position of the user.
+- **overview** - Text - is the profile summary/overview of the user.
 
 Optional Fields:
 
-- **dateOfBirth**
-- **nationality**
-- **status** - users marital status.
-- **address**
-- **city**
-- **postalCode**
-- **country**
+- **dateOfBirth** - String('YYYY-MM-DD')
+- **nationality** - String
+- **status** - String - users marital status.
+- **address** - String
+- **city** - String
+- **postalCode** - String
+- **country** - String
 
 ```json
 {
@@ -150,21 +150,21 @@ All fields are optional
 
 Required Fields:
 
-**name** - Full company name
-**title** - Job title
-**description** - Job description
-**since** - Job start date
-**present** - Boolean field (If user is currently working in the company) defaults to false
+- **name** - String - Full company name
+- **title** - String - Job title
+- **description** - Text - Job description
+- **since** - String('YYYY-MM-DD') - Job start date
+- **present** - Boolean field (If user is currently working in the company) defaults to false
 
 Optional Fields:
 
-**until** - Job end date
-**logo** - Company logo
-**phone** - Company contact number
-**address**
-**city**
-**country**
-**postalCode**
+- **until** String('YYYY-MM-DD') - Job end date
+- **logo** - String - Company logo
+- **phone** - String - Company contact number
+- **address** - String
+- **city** - String
+- **country** - String
+- **postalCode** - String
 
 ```json
 [
@@ -181,6 +181,61 @@ Optional Fields:
 		city: '',
 		country: '',
 		postalCode: ''
+	}
+]
+```
+
+###### Educations (Array of Objects)
+
+Required Fields:
+
+- **name** - String - Full School name
+- **title** - String - School title
+- **description** - Text - School description
+- **since** - String('YYYY-MM-DD') - School start date
+- **present** - Boolean field (If user is currently working in the company) defaults to false
+
+Optional Fields:
+
+- **until** - String('YYYY-MM-DD') - Job end date
+- **logo** - String - School logo
+- **phone** - String - School contact number
+- **address** - String
+- **city** - String
+- **country** - String
+- **postalCode** - String
+
+```json
+[
+	{
+		name: '',
+		title: '',
+		description: '',
+		since: '',
+		until: null,
+		present: false,
+		logo: '',
+		phone: '',
+		address: '',
+		city: '',
+		country: '',
+		postalCode: ''
+	}
+]
+```
+
+###### Skills (Array of Objects)
+
+Required Fields:
+
+- **name** - String - Skill name
+- **ratings** - Integer - Skill ratings (0 - Novice, 1 - Beginner, 2 - Skillfull, 3 - Experienced, 4 - Expert)
+
+```json
+[
+	{
+		"name": '',
+		"ratings": 0 // defaults to 0
 	}
 ]
 ```
