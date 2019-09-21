@@ -118,18 +118,18 @@ Optional Fields:
 
 ```json
 {
-	firstName: '',
-	middleName: '',
-	lastName: '',
-	title: '',
-	overview: '',
-	dateOfBirth: '',
-	nationality: '',
-	status: '',
-	address: '',
-	city: '',
-	postalCode: '',
-	country: ''
+	firstName: "",
+	middleName: "",
+	lastName: "",
+	title: "",
+	overview: "",
+	dateOfBirth: "",
+	nationality: "",
+	status: "",
+	address: "",
+	city: "",
+	postalCode: "",
+	country: ""
 }
 ```
 
@@ -139,10 +139,10 @@ All fields are optional
 
 ```json
 {
-	email: '',
-	phone: '',
-	skype: '',
-	linkedin: '',
+	email: "",
+	phone: "",
+	skype: "",
+	linkedin: "",
 }
 ```
 
@@ -169,18 +169,18 @@ Optional Fields:
 ```json
 [
 	{
-		name: '',
-		title: '',
-		description: '',
-		since: '',
+		name: "",
+		title: "",
+		description: "",
+		since: "",
 		until: null,
 		present: false,
-		logo: '',
-		phone: '',
-		address: '',
-		city: '',
-		country: '',
-		postalCode: ''
+		logo: "",
+		phone: "",
+		address: "",
+		city: "",
+		country: "",
+		postalCode: ""
 	}
 ]
 ```
@@ -208,18 +208,18 @@ Optional Fields:
 ```json
 [
 	{
-		name: '',
-		title: '',
-		description: '',
-		since: '',
+		name: "",
+		title: "",
+		description: "",
+		since: "",
 		until: null,
 		present: false,
-		logo: '',
-		phone: '',
-		address: '',
-		city: '',
-		country: '',
-		postalCode: ''
+		logo: "",
+		phone: "",
+		address: "",
+		city: "",
+		country: "",
+		postalCode: ""
 	}
 ]
 ```
@@ -234,8 +234,8 @@ Required Fields:
 ```json
 [
 	{
-		"name": '',
-		"ratings": 0 // defaults to 0
+		"name": "",
+		"ratings": 0
 	}
 ]
 ```
