@@ -286,7 +286,8 @@ Now run the test
 
 ###### Finish things up
 
-Once everything is done, don't forget to fill up our template manifest in `src/components/templates/manifest.js`
+Once everything is done, create a PR of your work in github.
+Don't forget to fill up our template manifest in `src/components/templates/manifest.js`
 Also include a `400 × 565` thumbnail preview of your work.
 
 Once your PR is approved and merge, we will publish your work in imprezify.com .
