@@ -57,6 +57,15 @@
 import components from './components';
 
 export default {
+  head: {
+    link: [
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'
+      },
+    ],
+  },
   components: {
     ...components
   },

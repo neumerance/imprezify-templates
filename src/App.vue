@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import * as ImpTemplates from './components/templates';
+import * as Templates from './components/templates';
 
 export default {
   name: 'app',
   components: {
-    ...ImpTemplates
+    ...Templates
   }
 }
 </script>
